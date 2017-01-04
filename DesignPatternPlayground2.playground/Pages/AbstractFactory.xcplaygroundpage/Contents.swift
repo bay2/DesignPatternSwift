@@ -106,7 +106,7 @@ extension RoomType {
     func getSide(dect: Direction) -> MapSite? {
         return sides[dect.hashValue]
     }
-
+    
     mutating func setSide(dect: Direction, site: MapSite) {
         sides[dect.hashValue] = site
     }
@@ -219,7 +219,7 @@ struct NormalMazeFactory: MazeFactory {
     typealias RoomMazeType = Room
     typealias WallMazeType  = Wall
     typealias DoorMazeType = Door
-
+    
 }
 
 //: 定义一个迷宫游戏，通过 createMaze 方法来创建游戏中的迷宫
@@ -299,7 +299,7 @@ struct DoorNeedingSpell: DoorType {
     init(r1: EnchantedRoom, r2: EnchantedRoom) {
         
     }
-
+    
 }
 
 extension DoorNeedingSpell: CustomStringConvertible {
@@ -321,11 +321,11 @@ struct EnchantedMazeFactory: MazeFactory {
     func makeDoor(r1: EnchantedRoom, r2: EnchantedRoom) -> DoorNeedingSpell {
         return DoorNeedingSpell(r1: r1, r2: r2)
     }
-
+    
     func makeRoom(_ n: Int) -> RoomMazeType {
         return EnchantedRoom(n, spell: Spell())
     }
-
+    
 }
 
 //: 使用工厂构建施了魔法的迷宫
@@ -334,7 +334,7 @@ var enchantedMaze = MazeGame.createMaze(mazeFactory: enchantedMazeFactory)
 print(enchantedMaze)
 
 
-/*: 
+/*:
  接下来，我们又接到一个新的需求，我们需要一个有炸弹💣的房间，如果炸弹💣爆炸则会炸毁房间的墙。
  */
 
