@@ -3,6 +3,9 @@ import Foundation
 //: [Previous](@previous)
 
 /*:
+ 
+ # 抽象工厂
+
  例子：
  为电脑游戏创建一个迷宫。迷宫定义了一系列房间，一个房间知道他的邻居；可能的邻居要么是另一个房间，要么是一堵墙、或者是另一个房间的门。
  
@@ -87,8 +90,7 @@ extension Maze: CustomStringConvertible {
 
 //: 定义普通的墙
 struct Wall: WallType {
-    func enter() {
-    }
+
 }
 
 extension Wall: CustomStringConvertible {
@@ -349,7 +351,6 @@ struct RoomWithABomb: RoomType {
         roomNo = n
         self.isBombe = isBombe
     }
-    
     
 }
 
