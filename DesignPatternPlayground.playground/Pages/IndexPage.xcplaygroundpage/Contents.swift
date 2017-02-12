@@ -5,4 +5,5 @@
  2. [Builder (生成器)](Builder)
  3. [Factory Method (工厂方法)](Factory_Method)
  4. [Prototype (原型)](Prototype)
+ 5. [Singleton (单例)](Singleton)
  */
