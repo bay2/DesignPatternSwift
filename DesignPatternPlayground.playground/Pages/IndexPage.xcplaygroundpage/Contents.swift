@@ -6,4 +6,5 @@
  3. [Factory Method (工厂方法)](Factory_Method)
  4. [Prototype (原型)](Prototype)
  5. [Singleton (单例)](Singleton)
+ 6. [Adapter (适配器)](Adapter)
  */
